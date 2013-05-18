@@ -1,7 +1,9 @@
 DIR:=plugin.audio.baidufm
 FILES:=addon.xml default.py icon.png changelog.txt
 TEMPFILE:=$(addprefix $(DIR)/,$(FILES))
-OUTPUT:=plugin.audio.baidufm-0.0.2.zip
+OUTPUT:=plugin.audio.baidufm-0.0.3.zip
+
+all:build
 
 build:$(OUTPUT)
 
@@ -28,5 +30,5 @@ clean:
 
 .INTERMEDIATE:$(TEMPFILE) $(DIR)
 
-.PHONEY:build update upload clean run
+.PHONEY:build update upload clean run all
 
